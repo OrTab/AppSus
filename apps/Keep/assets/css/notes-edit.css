@@ -1,0 +1,165 @@
+.edit-colors {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.edit-colors>* {
+    display: inline-block;
+    height: 22px;
+    width: 22px;
+    margin: 2px;
+    background-color: cornflowerblue;
+    border-radius: 50%;
+    border: 1px solid #00000041;
+    cursor: pointer;
+}
+
+.note .fa.fa-edit {
+    font-size: 1.1em;
+    padding-top: 0.1em;
+    padding-bottom: 0em;
+}
+
+
+.edit-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    left: 32.5vw;
+    height: 50vh;
+    width: 35vw;
+    top: 30vh;
+    /* opacity: 0; */
+    /* visibility: hidden; */
+    /* transform: translateY(-950px); */
+    transition: 0.4s;
+    z-index: 2;
+    border-radius: 8px;
+}
+
+.edit-modal .edit-colors {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 42%;
+}
+
+.edit-modal .notes-input {
+    margin-bottom: 12px;
+}
+
+.edit-modal .note-create {
+    display: block;
+}
+
+.details {
+    flex-grow: 1;
+}
+
+.edit-modal .options-bar>*:not(:last-child) {
+    margin-inline-end: 1.2em;
+}
+
+.edit-modal .options-bar>* {
+    font-size: 1.6em;
+    transition: 0.2s;
+}
+
+.edit-modal .options-bar {
+    opacity: 1;
+}
+
+.edit-modal .options-bar>*:hover {
+    transform: scale(1.1);
+}
+
+.edit-modal li {
+    user-select: none;
+    cursor: pointer;
+}
+
+.edit-modal .icons :not(:last-child) {
+    margin-inline-end: 1.5em;
+}
+
+.closeEditModal {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.726);
+    top: 0%;
+    z-index: 1;
+}
+
+.close-editModal-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
+}
+
+.edit-tools {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    width: 20%;
+}
+
+.edit-tools input[type=range] {
+    outline-style: none;
+    cursor: pointer;
+    appearance: none;
+    border-radius: 8px;
+    background-color: rgba(201, 218, 219, 0.589);
+}
+
+.edit-tools select {
+    font-size: 1.2em;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 0.3em;
+    max-width: 100%;
+}
+
+.scale-up-hor-right {
+    -webkit-animation: scale-up-hor-right 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: scale-up-hor-right 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes scale-up-hor-right {
+    0% {
+        -webkit-transform: scaleX(0.4);
+        transform: scaleX(0.4);
+        -webkit-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+    }
+    100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        -webkit-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+    }
+}
+
+@keyframes scale-up-hor-right {
+    0% {
+        -webkit-transform: scaleX(0.4);
+        transform: scaleX(0.4);
+        -webkit-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+    }
+    100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        -webkit-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+    }
+}

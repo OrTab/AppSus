@@ -1,0 +1,148 @@
+    .notes-list {
+        max-width: 1400px;
+        margin: 0 auto;
+        columns: 4;
+    }
+    
+    .notes-list>* {
+        display: inline-block;
+        margin: 1em;
+    }
+    
+    .note {
+        position: relative;
+        min-width: 18em;
+        max-width: 19em;
+        box-shadow: 0 3px 8px 3px #7d7f8093;
+        text-align: center;
+        border-radius: 8px;
+        color: rgb(0, 0, 0);
+        padding: 0 1.2em;
+        transition: 0.2s;
+    }
+    
+    .note:hover {
+        box-shadow: 0 5px 11px 4.5px #7d7f80ab;
+    }
+    
+    .options-bar button {
+        background-color: transparent;
+        border: none;
+        font-size: 1.1em;
+        outline-style: none;
+    }
+    
+    .options-bar {
+        opacity: 0;
+        display: flex;
+        justify-content: space-evenly;
+        transition: 0.2s;
+    }
+    
+    .note:hover .options-bar {
+        opacity: 1;
+        /* padding: 0.1em 0; */
+    }
+    
+    .note.img i {
+        margin: 0%;
+        padding-bottom: 0.4em;
+    }
+    
+    .note-label {
+        position: absolute;
+        top: 0.5%;
+        left: 1%;
+        margin: 0%;
+        border: 1px solid rgba(0, 0, 0, 0.377);
+        padding: 0.2em 0.8em;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 0.8em;
+        max-width: 10em;
+        line-height: 1em;
+    }
+    
+    p {
+        overflow-wrap: break-word;
+    }
+    
+    .note.txt {
+        text-align: center;
+    }
+    
+    .note.img img {
+        max-height: 18em;
+        width: 100%;
+    }
+    
+    .note.video iframe {
+        border: none;
+        width: 100%;
+        padding-top: 0.5em;
+    }
+    
+    .mark {
+        text-decoration: line-through;
+    }
+    
+    .note.todos li {
+        user-select: none;
+        text-align: start;
+        cursor: pointer;
+    }
+    
+    .todos-modal {
+        background-color: rgba(0, 0, 0, 0.26);
+        padding: 2em;
+        width: 18em;
+        position: absolute;
+        left: calc(50vw - 9em);
+        top: 10%;
+        opacity: 0;
+        transition: 0.5s;
+        transform: translateY(-250px);
+        visibility: hidden;
+        border-radius: 10px;
+    }
+    
+    .todos-modal.open-modal {
+        transform: translateY(0px);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .todos-modal input {
+        border-radius: 6px;
+        padding: 0.3em;
+        width: 80%;
+    }
+    
+    .todos-modal button {
+        background-color: transparent;
+        border: none;
+        font-weight: 800;
+        font-size: 1.1em;
+        outline-style: none;
+    }
+    
+    .addTodoLine {
+        position: absolute;
+        right: 8%;
+    }
+    
+    .removeTodoLine {
+        position: absolute;
+        right: 2%;
+    }
+    
+    .todos-modal .close-btn {
+        position: absolute;
+        top: 0%;
+        right: 0;
+    }
+    
+    .note.todos p {
+        display: flex;
+        justify-content: space-between;
+    }
